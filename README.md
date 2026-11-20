@@ -14,20 +14,20 @@ This repository supports research on **The Influence of Citation Formatting on H
 ## Repository Structure
 
 AITR_Lab02_<EnrollmentNo>_CitationFormattingTrust/
-├── README.md                                        # Research question, context, and reproducibility guide
-├── requirements.txt                                 # Verified Python dependencies
-├── configs/                                         # Frozen verification and threshold settings
+├── README.md                                       
+├── requirements.txt                                
+├── configs/                                       
 │   └── verification_config.yaml
-├── data/                                            # Dataset access and input schema notes
+├── data/                                           
 │   └── README.md
-├── notebooks/                                       # Runnable notebook version of verification workflow
+├── notebooks/                                      
 │   └── Citation_Formatting_Trust_Research.ipynb
-├── src/                                             # Reusable verification functions
+├── src/                                            
 │   ├── __init__.py
 │   └── verify_citation.py
-├── scripts/                                         # CLI entrypoint for reference verification
+├── scripts/                                        
 │   └── run_verification.py
-├── results/                                         # Sample logs and structured verification outputs
+├── results/                                         
 │   ├── sample_verification_report.txt
 │   └── sample_verification_results.csv
 ├── paper/                                           # Unmodified research papers
