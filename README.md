@@ -1,39 +1,51 @@
-# ATR_Lab02_Project
 # The Influence of Citation Formatting on Human Trust in Fabricated Resources
 
 ## Research Question & Overview
-**Research Question:** How does citation formatting influence perceived trustworthiness and verification behavior when a cited scholarly resource is fabricated or non-existent?[cite: 3, 29, 109]
+**Research Question:** How does citation formatting influence perceived trustworthiness and verification behavior when a cited scholarly resource is fabricated or non-existent?
 
-This repository supports research on **The Influence of Citation Formatting on Human Trust in Fabricated Resources**, examining how visible citation formatting cues—such as citation style (author-date vs. numbered), bibliographic completeness, consistency, and persistent identifiers (DOIs)—shape initial credibility before verification[cite: 3, 29, 109]. Alongside the manuscripts, it includes a reproducible Crossref metadata verification baseline (`src/verify_citation.py`) to check whether cited works exist and compare submitted bibliographic fields against Crossref records.
-
-## Literature & Empirical Context
-- **Anti-Monitoring & Trust in AI Citations:** Experimental research on LLM-generated responses shows that the presence of citations can increase perceived trust—even when citations are random or irrelevant—while trust drops when users actually check citations[cite: 109, 111].
-- **Heuristic Credibility & Trust Transfer:** Frameworks such as the **MAIN Model** and trust-transfer cues explain how formal presentation and authority signals can lower verification effort and transfer perceived credibility to unverified statements[cite: 109].
-- **Fabricated Citations in the Scholarly Record:** Large-scale audits—including an audit of 2.5 million biomedical papers (`The Lancet`, 2026) and a 2020–2025 analysis of preprints and repositories—document rising occurrences of fabricated or hallucinated citations and highlight risks of downstream contamination[cite: 109, 110].
+This repository accompanies the research paper *"The Influence of Citation Formatting on Human Trust in Fabricated Resources"* and provides a reproducible Crossref REST API metadata verification baseline (`src/verify_citation.py`) to check whether cited works exist and whether their metadata fields match authoritative bibliographic records.
 
 ## Repository Structure
-
-AITR_Lab02_CitationFormattingTrust/
-
-├── README.md                                       
-├── requirements.txt                                
-├── configs/                                       
+```text
+AITR_Lab02_Project/
+├── README.md                  # Research question and reproducibility guide
+├── requirements.txt           # Verified Python dependencies
+├── configs/                   # Frozen experimental settings
 │   └── verification_config.yaml
-├── data/                                           
+├── data/                      # Dataset access & input specification (no restricted raw data)
 │   └── README.md
-├── notebooks/                                      
+├── notebooks/                 # Exploration and verified runnable notebook
 │   └── Citation_Formatting_Trust_Research.ipynb
-├── src/                                            
-│   ├── __init__.py
+├── src/                       # Reusable verification functions
 │   └── verify_citation.py
-├── scripts/                                        
+├── scripts/                   # CLI entrypoint and batch evaluation scripts
 │   └── run_verification.py
-├── results/                                         
+├── results/                   # Genuine metric/log files and structured verification outputs
 │   ├── sample_verification_report.txt
 │   └── sample_verification_results.csv
-├── paper/                                           
-│   ├── final_research_paper.pdf
+├── paper/                     # Final research papers (unmodified)
+│   ├── ATR MNS_11_final.pdf
 │   └── Overleaf_Final_Paper.pdf
-├── research_decisions.md                            # Literature-to-experiment decisions
-├── baseline_validation.md                           # Reproduction checks, edge cases, and limitations
-└── ai_assistance_log.md                             # AI-assisted tasks and human verification log
+├── research_decisions.md      # Literature-to-experiment decisions
+├── baseline_validation.md     # Reproduction checks and deviations
+└── ai_assistance_log.md       # Significant prompts and human verification
+```
+
+## Setup & Reproducibility
+1. **Clone the repository and navigate to the project root:**
+   ```bash
+   cd AITR_Lab02_Project
+   ```
+2. **Install verified dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Run the interactive citation verification entrypoint:**
+   ```bash
+   python scripts/run_verification.py
+   ```
+   *(Note: Requires outbound HTTPS access to `https://api.crossref.org/works`.)*
+
+## Scope & Limitations
+- The Crossref verification module checks bibliographic existence and field-level consistency (title, authors, publication year, venue, and DOI).
+- It serves as a preliminary bibliographic check and does **not** prove whether a real cited source actually supports the claim made in running text.
