@@ -13,7 +13,8 @@ This repository supports research on **The Influence of Citation Formatting on H
 
 ## Repository Structure
 
-AITR_Lab02_<EnrollmentNo>_CitationFormattingTrust/
+AITR_Lab02_CitationFormattingTrust/
+
 ├── README.md                                       
 ├── requirements.txt                                
 ├── configs/                                       
