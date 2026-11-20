@@ -31,8 +31,8 @@ AITR_Lab02_CitationFormattingTrust/
 ├── results/                                         
 │   ├── sample_verification_report.txt
 │   └── sample_verification_results.csv
-├── paper/                                           # Unmodified research papers
-│   ├── ATR MNS_11_final.pdf
+├── paper/                                           
+│   ├── final_research_paper.pdf
 │   └── Overleaf_Final_Paper.pdf
 ├── research_decisions.md                            # Literature-to-experiment decisions
 ├── baseline_validation.md                           # Reproduction checks, edge cases, and limitations
