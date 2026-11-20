@@ -1,0 +1,8 @@
+=======================================================
+ACADEMIC REFERENCE VERIFICATION SYSTEM - INPUT VALIDATION CHECK
+=======================================================
+Input Case: Empty title string ("")
+Decision: INVALID INPUT
+Reason: Paper title is required.
+
+Note: Run `python scripts/run_verification.py` with active internet access to record live Crossref API verification outputs here.
